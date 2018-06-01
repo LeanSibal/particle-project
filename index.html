@@ -25,7 +25,7 @@
 
 		<script>
 
-			var SEPARATION = 200, AMOUNTX = 50, AMOUNTY = 50;
+			var SEPARATION = 200, AMOUNTX = 45, AMOUNTY = 45;
 
 			var container, stats;
 			var camera, scene, renderer;
@@ -88,7 +88,7 @@
 
 				mouseX = 355;
 				mouseY = 54.5;
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				//document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
@@ -173,9 +173,9 @@
 						particle.position.y = ( Math.sin( ( ix + count ) * 0.4 ) * 200 ) +
 							( Math.sin( ( iy + count ) * 0.1 ) * 900 );
 						particle.position.x = ( Math.sin( ( ix + count ) * 0.3 ) * 200 ) +
-							( Math.sin( ( iy + count ) * 0.25 ) * 900 );
+							( Math.sin( ( iy + count ) * 0.25 ) * 800 );
 						particle.position.z = ( Math.sin( ( ix + count ) * 0.2 ) * 300 ) +
-							( Math.sin( ( iy + count ) * 0.3 ) * 900 );
+							( Math.sin( ( iy + count ) * 0.3 ) * 700 );
 
 						//particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
 							//( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
@@ -193,7 +193,7 @@
 
 				renderer.render( scene, camera );
 
-				count += 0.1;
+				count += 0.03;
 
 			}
 
