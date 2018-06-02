@@ -25,7 +25,7 @@
 
 		<script>
 
-			var SEPARATION = 200, AMOUNTX = 65, AMOUNTY = 35;
+			var SEPARATION = 300, AMOUNTX = 65, AMOUNTY = 35;
 
 			var container, stats;
 			var camera, scene, renderer;
@@ -45,7 +45,7 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 100000, window.innerWidth / window.innerHeight, 500, 5000 );
+				camera = new THREE.PerspectiveCamera( 100000, window.innerWidth / 400, 500, 5000 );
 				camera.position.z = 1000;
 
 				scene = new THREE.Scene();
@@ -177,17 +177,6 @@
 							( Math.sin( ( iy + count ) * 0.25 ) * 800 );
 						particle.position.z = ( Math.sin( ( ix + count ) * 0.4 ) * 300 ) +
 							( Math.sin( ( iy + count ) * 0.3 ) * 700 );
-
-						//particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
-							//( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
-
-						/* default 
-						particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
-							( Math.sin( ( iy + count ) * 0.5 ) * 50 );
-						particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
-							( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
-							*/
-
 					}
 
 				}
